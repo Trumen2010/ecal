@@ -1,3 +1,4 @@
+if (HAS_QT5)
 cmake_minimum_required(VERSION 3.13)
 project(qwt VERSION 6.2.0)
 
@@ -68,4 +69,5 @@ install(CODE
     endwhile()
     "
 )
+endif()
 endif()

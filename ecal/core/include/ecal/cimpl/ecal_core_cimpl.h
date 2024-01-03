@@ -31,7 +31,7 @@
 #include "ecal_init_cimpl.h"
 
 #ifdef __cplusplus
-extern "C"
+namespace C
 {
 #endif /*__cplusplus*/
   /**
