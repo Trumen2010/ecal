@@ -48,6 +48,16 @@ namespace {
 #endif
 }
 
+TEST(Core, CheckIfIsInitialized)
+{
+  // check if initialized
+  EXPECT_EQ(0, eCAL::IsInitialized(0));
+  // initialize eCAL API
+  eCAL::Initialize(0, nullptr, "check if is initialized");
+  // check if initialized
+  EXPECT_EQ(1, eCAL::IsInitialized(0));
+}
+
 TEST(Core, MultipleInitializeFinalize)
 {
   // try to initialize / finalize multiple times

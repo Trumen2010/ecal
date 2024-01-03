@@ -66,6 +66,14 @@ ECAL_API int ecal_initialize(int argc_, char **argv_, const char* unit_name_)
 }
 
 /****************************************/
+/*      ecal_isinitialized              */
+/****************************************/
+ECAL_API int ecal_isinitialized(unsigned int component_)
+{
+    return(eCAL::IsInitialized(component_));
+}
+
+/****************************************/
 /*      ecal_finalize                   */
 /****************************************/
 ECAL_API int ecal_finalize()
@@ -891,7 +899,7 @@ ECAL_API int mon_get_monitoring(const char** mon_buf_, int* mon_buf_len_)
       // free allocated memory:
       ecal_free_mem(cbuf);
       if (mon_buf_len_ != nullptr) *mon_buf_len_ = 0;
-      // operation could't be completed successfully
+      // operation couldn't be completed successfully
       return(0);
     }
     return(static_cast<int>(mon_s.size()));

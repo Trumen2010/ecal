@@ -56,6 +56,13 @@ ECAL_API const char* ecal_getdate();
 ECAL_API int ecal_initialize(int argc_, char **argv_, const char* unit_name_);
 
 /**
+ * @brief Check eCAL initialize state.
+ *
+ * @return 1 if eCAL is initialized, if not 0.
+ */
+ECAL_API int ecal_isinitialized(unsigned int component_);
+
+/**
  * @brief Finalize eCAL API.
  *
  * @return Zero if succeeded, 1 if already initialized, -1 if failed.

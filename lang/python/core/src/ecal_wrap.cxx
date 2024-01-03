@@ -140,6 +140,16 @@ PyObject* finalize(PyObject* /*self*/, PyObject* /*args*/)
 }
 
 /****************************************/
+/*      isinitialized                   */
+/****************************************/
+PyObject* isinitialized(PyObject* /*self*/, PyObject* /*args*/)
+{
+    int isinitialized{ 0 };
+    isinitialized = ecal_isinitialized(0);
+    return(Py_BuildValue("i", isinitialized));
+}
+
+/****************************************/
 /*      getversion                      */
 /****************************************/
 PyObject* getversion(PyObject* /*self*/, PyObject* /*args*/)
