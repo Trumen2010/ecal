@@ -477,6 +477,7 @@ if(BUILD_ECAL_TESTS)
   add_subdirectory(testing/ecal/pubsub_test)
   add_subdirectory(testing/ecal/topic2mcast_test)
   add_subdirectory(testing/ecal/util_test)
+  add_subdirectory(testing/c/core_test_c)
   
   # ------------------------------------------------------
   # test apps
